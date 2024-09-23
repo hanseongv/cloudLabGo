@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cloudLabGo/pkg/restAPI"
+	"API"
 	"fmt"
 	"log"
 	"net/http"
@@ -10,9 +10,9 @@ import (
 func main() {
 	// 라우팅 설정
 	// GET : /api/item
-	http.HandleFunc("/api/item", restAPI.GetItemsHandler)
-	// POST: /api/create
-	http.HandleFunc("/api/create", restAPI.CreateItemHandler)
+	http.HandleFunc("/api/item", API.GetItemsHandler)
+	// POST: /api/item/create
+	http.HandleFunc("/api/item/create", API.CreateItemHandler)
 
 	port := ":8080"
 	fmt.Println("Starting server on port", port)

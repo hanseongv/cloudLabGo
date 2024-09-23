@@ -1,3 +1,3 @@
-module cloudLabGo
+module restAPI
 
 go 1.21.4
